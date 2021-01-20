@@ -2,7 +2,6 @@ import React from 'react';
 import PageDefault from '../../Components/PageDefault'
 import { BrowserRouter as Router } from 'react-router-dom'
 import styled from 'styled-components'
-import IntroImg from './../../assets/img/IntroImg.jpg'
 import Lincoln from './../../assets/img/Lincoln.jpeg'
 import Logo from './../../assets/img/Logo.png'
 import { ParallaxProvider ,ParallaxBanner } from 'react-scroll-parallax'

@@ -37,7 +37,7 @@ const SimpleSlider = () => {
     };
     return (
         <div className='carouselWorks' style={{textAlign:'center'}}>
-            <h2 className = 'carouselTitle'> Works</h2>
+            <h2 className = 'carouselTitle'> Projects</h2>
             <Slider {...settings}>
                 {projects.map((item) => <div>
                     <h3>{item.nome}</h3>
