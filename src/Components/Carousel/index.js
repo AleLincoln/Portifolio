@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Project1 from './../../assets/img/Project1.JPG'
+import './style.css'
 
 
 const projects = [
@@ -34,14 +35,15 @@ const SimpleSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        
     };
     return (
         <div className='carouselWorks' style={{textAlign:'center'}}>
             <h2 className = 'carouselTitle'> Projects</h2>
-            <Slider {...settings}>
+            <Slider {...settings} arrows={false}>
                 {projects.map((item) => <div>
                     <h3>{item.nome}</h3>
-                    <a href={item.url} target='_blank'>
+                    <a href={item.url} target='_blank' rel="noopener noreferrer">
                         <img src={Project1} alt={item.nome} style={{width:600, marginLeft:'auto', marginRight:'auto'}}>
                             
                         </img>

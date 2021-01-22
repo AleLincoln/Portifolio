@@ -2,27 +2,31 @@ import React from 'react';
 import PageDefault from '../../Components/PageDefault'
 import { BrowserRouter as Router } from 'react-router-dom'
 import styled from 'styled-components'
-import Lincoln from './../../assets/img/Lincoln.jpeg'
+import IntroImg from './../../assets/img/IntroImg.jpg'
 import Logo from './../../assets/img/Logo.png'
 import { ParallaxProvider ,ParallaxBanner } from 'react-scroll-parallax'
 import SimpleSlider from './../../Components/Carousel'
+import {FaRegHandPeace, FaWhatsapp} from 'react-icons/fa'
+import {AiOutlineMail} from 'react-icons/ai'
+
 
 
 const Intro = styled.div`
-  background-color:rgba(0, 0, 0, 0.700);
+  
   padding: 40px;
-  padding-top:4.6em;
 `
 
 const IntroTitle = styled.h2`
   font-weight:bold;
   font-size: 20px;
   text-align: center;
+  color:white;
 `
 
 const IntroImage = styled.div`
  & img{
     width:300px;
+    border-radius:50%;
  }
 `
 
@@ -37,6 +41,7 @@ const HeroTitle = styled.h1`
   
 
 `
+
 
 
 function HomePage() {
@@ -74,8 +79,12 @@ function HomePage() {
             backgroundColor: 'rgba(0, 0, 0, 0.700)',
             backgroundImage:{Logo}
             }}id='mainSection'>
-          
-            <HeroTitle>Hello, I'm Lincoln</HeroTitle>
+            
+            
+              <HeroTitle>Hello <FaRegHandPeace/>,<br/> I'm Lincoln</HeroTitle>
+              
+
+            
            
           </div> 
          
@@ -87,19 +96,21 @@ function HomePage() {
         <IntroTitle>
             About me
           </IntroTitle>
-          <div style={{display:'flex'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'center'}}>
+         
           <IntroImage>
-            <img src={Lincoln} alt='Foto Lincoln' />
+            <img src={IntroImg} alt='Foto Lincoln' />
           </IntroImage>
-
           <div className='IntroParagraph' >
 
             <p style={{color:'white'}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Hey! I'm Lincoln Alexandrino and I'm a Front-End Developer.
+            I've been working and studying web programming since 2019.
               </p>
 
 
           </div>
+          
           </div>
 
         </Intro>
@@ -116,9 +127,12 @@ function HomePage() {
           <div className='contact' id='Contacts' style={{marginTop:'100px'}}>
 
             <IntroTitle>Contact</IntroTitle>
-
-
-
+            <p style={{textAlign:'center'}}>If you want to talk, you can find me at:<br/><br/>
+             <AiOutlineMail style={{color:'#00C86F'}}/> lincoln_alexandrino@hotmail.com<br/>
+              <FaWhatsapp style={{color:'#00C86F'}}/> +351 939 918 288 
+            </p>
+            
+            
           </div>
 
       </PageDefault>
