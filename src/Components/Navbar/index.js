@@ -20,7 +20,7 @@ function Navbar() {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500} className="navbar-logo"><img src={Logo} id='logoImg'></img> AleLincoln</Link>
+                    duration={500} className="navbar-logo"><img src={Logo} id='logoImg' alt='Logo'></img> AleLincoln</Link>
 
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
