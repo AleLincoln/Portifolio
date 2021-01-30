@@ -1,15 +1,15 @@
 import React from 'react';
 import PageDefault from '../../Components/PageDefault'
 import { BrowserRouter as Router } from 'react-router-dom'
-import styled from 'styled-components'
 import IntroImg from './../../assets/img/IntroImg.jpg'
 import Logo from './../../assets/img/Logo.png'
 import { ParallaxProvider ,ParallaxBanner } from 'react-scroll-parallax'
 import SimpleSlider from './../../Components/Carousel'
 import {FaRegHandPeace, FaWhatsapp} from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
-
-
+import Skills from '../../Components/Skills'
+import styled from 'styled-components'
+import {Animated} from "react-animated-css"
 
 const Intro = styled.div`
   
@@ -18,7 +18,7 @@ const Intro = styled.div`
 
 const IntroTitle = styled.h2`
   font-weight:bold;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   color:white;
 `
@@ -80,8 +80,11 @@ function HomePage() {
             backgroundImage:{Logo}
             }}id='mainSection'>
             
-            
-              <HeroTitle>Hello <FaRegHandPeace/>,<br/> I'm Lincoln</HeroTitle>
+            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} animationInDuration={4000}>
+
+              <HeroTitle >Hello <FaRegHandPeace/>,<br/> I'm Lincoln</HeroTitle>
+
+            </Animated>
               
 
             
@@ -90,8 +93,7 @@ function HomePage() {
          
         </ParallaxBanner>
         </ParallaxProvider>
-       
-       
+
         <Intro className='introWrapper' id='About me'>
         <IntroTitle>
             About me
@@ -114,6 +116,14 @@ function HomePage() {
           </div>
 
         </Intro>
+
+            <div id='Skills'>
+                <IntroTitle>
+                  Skills
+                  </IntroTitle>
+                <Skills/>
+
+            </div>
         
 
           <div style={{

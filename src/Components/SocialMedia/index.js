@@ -26,7 +26,7 @@ font-size: 20px;
 `
 const P = styled.p`
 margin: 0 0 0 0;
-font-size: 20px;
+font-size: 0.8em;
 margin:20px
 
 `
