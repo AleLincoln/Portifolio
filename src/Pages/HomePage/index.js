@@ -139,7 +139,7 @@ function HomePage() {
           </div>
 
 
-          <div className='contact' id='Contacts' style={{marginTop:'100px'}} data-aos='fadeIn'>
+          <div className='contact' id='Contacts' style={{marginTop:'100px', height:'30vh'}} data-aos='fadeIn'>
 
             <IntroTitle>Contact</IntroTitle>
             <p style={{textAlign:'center'}}>If you want to talk, you can find me at:<br/><br/>
