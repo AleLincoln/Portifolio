@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Project1 from './../../assets/img/Project1.JPG'
 import './style.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const projects = [
@@ -29,6 +31,10 @@ const projects = [
 
 
 const SimpleSlider = () => {
+    useEffect(() =>{
+        Aos.init({duration:1000})
+    }, [])
+    
     const settings = {
         dots: true,
         infinite: true,
@@ -38,7 +44,7 @@ const SimpleSlider = () => {
         
     };
     return (
-        <div className='carouselWorks' style={{textAlign:'center'}}>
+        <div className='carouselWorks' style={{textAlign:'center'}} data-aos='slide-up'>
             <h2 className = 'carouselTitle'> Projects</h2>
             <Slider {...settings} arrows={false}>
                 {projects.map((item) => <div>

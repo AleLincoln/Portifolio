@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PageDefault from '../../Components/PageDefault'
 import { BrowserRouter as Router } from 'react-router-dom'
 import IntroImg from './../../assets/img/IntroImg.jpg'
@@ -10,6 +10,8 @@ import {AiOutlineMail} from 'react-icons/ai'
 import Skills from '../../Components/Skills'
 import styled from 'styled-components'
 import {Animated} from "react-animated-css"
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Intro = styled.div`
   
@@ -43,8 +45,11 @@ const HeroTitle = styled.h1`
 `
 
 
-
 function HomePage() {
+  useEffect(() =>{
+    Aos.init({duration:1500})
+  }, [])
+
   return (
 
 
@@ -93,19 +98,19 @@ function HomePage() {
          
         </ParallaxBanner>
         </ParallaxProvider>
-
+        
         <Intro className='introWrapper' id='About me'>
-        <IntroTitle>
+        <IntroTitle data-aos='fade-left'>
             About me
           </IntroTitle>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'center'}}>
          
-          <IntroImage>
+          <IntroImage data-aos='fade-right'>
             <img src={IntroImg} alt='Foto Lincoln' />
           </IntroImage>
           <div className='IntroParagraph' >
 
-            <p style={{color:'white'}}>
+            <p style={{color:'white'}} data-aos='fade-left'>
             Hey! I'm Lincoln Alexandrino and I'm a Front-End Developer.
             I've been working and studying web programming since 2019.
               </p>
@@ -117,7 +122,7 @@ function HomePage() {
 
         </Intro>
 
-            <div id='Skills'>
+            <div id='Skills' style={{marginTop:'100px', height:'30vh'}}  data-aos='fadeIn'>
                 <IntroTitle>
                   Skills
                   </IntroTitle>
@@ -134,7 +139,7 @@ function HomePage() {
           </div>
 
 
-          <div className='contact' id='Contacts' style={{marginTop:'100px'}}>
+          <div className='contact' id='Contacts' style={{marginTop:'100px'}} data-aos='fadeIn'>
 
             <IntroTitle>Contact</IntroTitle>
             <p style={{textAlign:'center'}}>If you want to talk, you can find me at:<br/><br/>
