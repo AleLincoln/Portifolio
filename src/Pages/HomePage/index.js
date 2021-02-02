@@ -13,6 +13,20 @@ import {Animated} from "react-animated-css"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
+
+const HeroTitle = styled.h1`
+   @media (max-width:600px){
+    top:5rem;
+  }
+
+  font-size:4.5em;
+  color:#00C86F;
+  margin:40px;
+  position:relative;
+  top:8rem
+
+`
+
 const Intro = styled.div`
   
   padding: 40px;
@@ -20,27 +34,22 @@ const Intro = styled.div`
 
 const IntroTitle = styled.h2`
   font-weight:bold;
-  font-size: 24px;
+  font-size: 1em;
   text-align: center;
   color:white;
 `
 
 const IntroImage = styled.div`
  & img{
-    width:300px;
+    width:12.5em;
     border-radius:50%;
  }
 `
 
-const HeroTitle = styled.h1`
-  
-  font-size:4.5rem;
-  color:#00C86F;
-  margin:40px;
-  position:relative;
-  top:8rem;
 
-  
+const IntroParagraph = styled.div`
+  font-size:1em;
+  text-align:center;
 
 `
 
@@ -80,7 +89,7 @@ function HomePage() {
             flexDirection:'row',
             position:'absolute',
             width:'100%',
-            height:'90vh',
+            height:'100vh',
             backgroundColor: 'rgba(0, 0, 0, 0.700)',
             backgroundImage:{Logo}
             }}id='mainSection'>
@@ -108,21 +117,21 @@ function HomePage() {
           <IntroImage data-aos='fade-right'>
             <img src={IntroImg} alt='Foto Lincoln' />
           </IntroImage>
-          <div className='IntroParagraph' >
+          <IntroParagraph>
 
-            <p style={{color:'white'}} data-aos='fade-left'>
+            <p data-aos='fade-left'>
             Hey! I'm Lincoln Alexandrino and I'm a Front-End Developer.
             I've been working and studying web programming since 2019.
               </p>
 
 
-          </div>
+          </IntroParagraph>
           
           </div>
 
         </Intro>
 
-            <div id='Skills' style={{marginTop:'100px', height:'30vh'}}  data-aos='fadeIn'>
+            <div id='Skills' style={{height:'30vh', margin:'4em 1.5em 0 1.5em'}}  data-aos='fadeIn'>
                 <IntroTitle>
                   Skills
                   </IntroTitle>

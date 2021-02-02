@@ -48,7 +48,7 @@ const projects = [
 
 const Description = styled.p`
     overflow: hidden;
-    width:33.33.em;
+    width:80%;
     margin-left:auto;
     margin-right:auto;
     line-height:24px;
@@ -59,6 +59,16 @@ const TecsColor = styled.span`
 
 
 `
+const CarouselImg = styled.img`
+@media (max-width:600px){
+    width:90%;
+  }
+
+    width:600px; 
+    margin-left:auto;
+    margin-right:auto;
+`
+
 
 
 const SimpleSlider = () => {
@@ -75,7 +85,7 @@ const SimpleSlider = () => {
         
     };
     return (
-        <div className='carouselWorks' style={{textAlign:'center', margin:'0 1em 0 1em'}} data-aos='slide-up'>
+        <div className='carouselWorks' style={{textAlign:'center', margin:'0 1em 0 1em'}} data-aos='fadeIn'>
             <h2 className = 'carouselTitle'> Projects</h2>
             <Slider {...settings} arrows={false}>
                 {projects.map((item) => <div>
@@ -83,9 +93,9 @@ const SimpleSlider = () => {
                     <Description>{item.description}</Description>
                     <Description>Tecs: <TecsColor>{item.tecs}</TecsColor></Description>
                     <a href={item.url} target='_blank' rel="noopener noreferrer">
-                        <img src={item.image} alt={item.nome} style={{width:600, marginLeft:'auto', marginRight:'auto'}}>
+                        <CarouselImg src={item.image} alt={item.nome}>
                             
-                        </img>
+                        </CarouselImg>
                         
                     </a>
                 </div>)}
