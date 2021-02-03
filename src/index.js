@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HomePage from './Pages/HomePage'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Card from './Pages/Card'
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <HomePage />
-  </React.StrictMode>,
+  
+    <Router>
+      <Switch>
+      <Route path='/' component={HomePage} exact/>   
+      <Route path='/card' component={Card}  />
+
+      </Switch>
+    
+    </Router>,
   document.getElementById('root')
 );
 

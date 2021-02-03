@@ -121,8 +121,7 @@ function HomePage() {
 
             <p data-aos='fade-left'>
             Hey! I'm Lincoln Alexandrino and I'm a Front-End Developer.
-            I've been working and studying web programming since 2019.
-              </p>
+            I've been working and studying web programming since 2019.</p>
 
 
           </IntroParagraph>
