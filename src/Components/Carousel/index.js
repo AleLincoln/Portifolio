@@ -6,6 +6,7 @@ import project1 from '../../assets/img/Project1.JPG'
 import aleLincoln from '../../assets/img/AleLincoln.JPG'
 import onTheOcean from '../../assets/img/onTheOcean.JPG'
 import JustMkt from '../../assets/img/JustMkt.png'
+import aluraQuiz from '../../assets/img/aluraQuiz.JPG'
 import './style.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -13,6 +14,13 @@ import styled from 'styled-components'
 
 
 const projects = [
+    {
+        nome: 'Naruto Quiz',
+        description: "Quiz using Next Js features",
+        tecs: 'Next Js - React ',
+        url: 'https://alura-quiz-pi-ochre.vercel.app/',
+        image: aluraQuiz
+    },
     {
         nome: 'AleLincoln Portfolio',
         url: 'https://alelincoln.vercel.app/',
