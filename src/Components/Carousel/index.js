@@ -7,6 +7,7 @@ import aleLincoln from '../../assets/img/AleLincoln.JPG'
 import onTheOcean from '../../assets/img/onTheOcean.JPG'
 import JustMkt from '../../assets/img/JustMkt.png'
 import aluraQuiz from '../../assets/img/aluraQuiz.JPG'
+import MoveIt from '../../assets/img/MoveIt.JPG'
 import './style.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -14,6 +15,13 @@ import styled from 'styled-components'
 
 
 const projects = [
+    {
+        nome: 'Move it',
+        description: "A exercise game to do at work",
+        tecs: 'Next Js - React - Context API ',
+        url: 'https://move-it-79tqm05bp-alelincoln.vercel.app/',
+        image: MoveIt
+    },
     {
         nome: 'Naruto Quiz',
         description: "Quiz using Next Js features",
